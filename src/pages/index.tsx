@@ -4,7 +4,6 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 import {Seo} from "../components/seo"
-import {FaBeer} from "react-icons/fa";
 import {GiLetterBomb, GiMicroscope} from "react-icons/gi";
 import {BsDatabaseFillDown, BsFillClipboardDataFill} from "react-icons/bs";
 
@@ -32,7 +31,7 @@ const Index: React.FC<PageProps<DataProps>> = () => {
                     <div className="w-1/2">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                             Uncover the Key Ingredients to Your Success</h1>
-                        <p className="text-lg md:text-xl lg:text-2xl mb-6">
+                        <p className="text-lg md:text-xl lg:text-2xl mb-6 text-stone-300">
                             Join us in the pursuit of unraveling the secrets
                             to success through an exploration of In-Game Data and Content Creators' metrics.
                         </p>
