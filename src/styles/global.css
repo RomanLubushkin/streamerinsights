@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .hero-gradient {
+        background-image: linear-gradient(to right, rgba(27, 25, 23, 1), rgba(27, 25, 23, 0.6), rgba(27, 25, 23, 1));
+    }
+}
+
+body {
+    @apply bg-stone-900
+}
