@@ -11,3 +11,18 @@
 body {
     @apply bg-stone-900
 }
+
+.highcharts-plot-band  {
+    @apply fill-red-300;
+    @apply opacity-50;
+}
+
+text,
+.highcharts-title,
+.highcharts-plot-band-label  {
+    @apply fill-stone-700;
+}
+
+.highcharts-background {
+    @apply fill-stone-100;
+}
