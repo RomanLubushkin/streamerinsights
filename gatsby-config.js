@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/icons`,
+        path: `${__dirname}/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -33,7 +33,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/icons/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `static/favicon/mstile-150x150.png`,
       },
     },
     'gatsby-plugin-postcss',

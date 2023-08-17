@@ -20,6 +20,11 @@ const Index: React.FC<PageProps<DataProps>> = () => {
     )
 }
 
-export const Head: HeadFC<DataProps> = () => <Seo title="Using TypeScript"/>
+export const Head: HeadFC<DataProps> = () => (
+    <Seo
+        title="Uncover the Key Ingredients to Your Success - streamerinsights.org"
+        description="Join us in the pursuit of unraveling the secrets to success through an exploration of In-Game Data and Content Creators' metrics."
+    />
+)
 
 export default Index

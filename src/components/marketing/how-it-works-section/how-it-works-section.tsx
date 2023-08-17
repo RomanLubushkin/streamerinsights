@@ -9,7 +9,7 @@ interface Props {
 
 export const HowItWorksSection: React.FC<Props> = () => {
     return (
-        <section className="bg-stone-800 py-16">
+        <section id="how-it-works" className="bg-stone-800 py-16">
             <div className="container mx-auto">
                 <h2 className="text-white text-3xl md:text-4xl font-semibold text-center mb-6">
                     How It Works
