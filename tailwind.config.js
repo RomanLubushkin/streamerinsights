@@ -5,7 +5,14 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        twitch: {
+          100: '#6441A5',
+          200: '#402A6A',
+        }
+      }
+    },
   },
   plugins: [],
 }

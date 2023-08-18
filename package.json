@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/highcharts": "^7.0.0",
+    "@types/store": "^2.0.2",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
@@ -14,9 +15,13 @@
     "gatsby-transformer-sharp": "^5.11.0",
     "highcharts": "^11.1.0",
     "highcharts-react-official": "^3.2.0",
+    "js-base64": "^3.7.5",
+    "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.10.1"
+    "react-icons": "^4.10.1",
+    "store": "^2.0.12",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.15",
