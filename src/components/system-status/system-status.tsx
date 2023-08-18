@@ -43,6 +43,10 @@ export const SystemStatus: React.FC<Props> = props => {
                             )
                         },
                         {
+                            title: "Profile is Public or you're the owner",
+                            level: isAuth ? "success" : "error",
+                        },
+                        {
                             title: "Data loaders activated",
                             level: isParticipant ? "success" : "error",
                             suggestion: (
