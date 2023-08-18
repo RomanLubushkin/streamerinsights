@@ -12,7 +12,7 @@ interface Props {
 export const Header: React.FC<Props> = () => {
     const {isAuth, isLoaded, userInfo} = useAuth();
     return (
-        <header className="bg-stone-900 h-14 font-semibold flex justify-between items-center container mx-auto">
+        <header className="bg-stone-900 height-header font-semibold flex justify-between items-center container mx-auto">
             <div className="text-stone-100 text-xl">
                 Streamer Insights
             </div>

@@ -1,6 +1,6 @@
 export enum AppPath {
     TWITCH_AUTH_REDIRECT = '/auth/twitch',
-    PROFILE = '/profile/twitch/:login',
+    PROFILE = '/profile/:login',
 }
 
 export function genProfileUrl(login: string) {

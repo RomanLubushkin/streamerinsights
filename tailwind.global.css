@@ -30,3 +30,11 @@ text,
 .highcharts-background {
     @apply fill-stone-100;
 }
+
+.height-header {
+    height: 3.5rem;
+}
+
+.height-100vh {
+    height: calc(100vh - 3.5rem);
+}
