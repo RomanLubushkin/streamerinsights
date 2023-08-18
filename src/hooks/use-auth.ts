@@ -8,14 +8,13 @@ import {
 } from "../utils/local-storage";
 
 type AuthState = {
+    isLoaded: boolean;
     userInfo?: UserInfo;
     accessToken?: string;
 };
 
 export const useAuth = () => {
-    const [state, setState] = React.useState<AuthState>(() => {
-        return {userInfo: getUserInfo(), accessToken: getAccessToken()};
-    });
+    const [state, setState] = React.useState<AuthState>({isLoaded: false});
 
     const setAccessToken = React.useCallback((value: string) => {
         setState(state => ({...state, accessToken: value}));
@@ -28,7 +27,12 @@ export const useAuth = () => {
         storageSetUserInfo(value);
     }, []);
 
+    React.useEffect(() => {
+        setState(state => ({...state, isLoaded: true, userInfo: getUserInfo(), accessToken: getAccessToken()}))
+    }, [])
+
     return {
+        isLoaded: state.isLoaded,
         isAuth: !!state.userInfo,
         userInfo: state.userInfo,
         setUserInfo,
