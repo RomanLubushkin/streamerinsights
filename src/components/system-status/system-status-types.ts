@@ -1,0 +1,1 @@
+export type SystemStatusLevel = 'success' | 'error' | 'warning';

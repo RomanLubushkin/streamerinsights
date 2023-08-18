@@ -1,6 +1,6 @@
 import * as React from "react"
 import {startAuth} from "../../../utils/auth";
-import {genProfileUrl} from "../../../utils/path";
+import {AppPath} from "../../../utils/path";
 import {Link} from "gatsby";
 import {useAuth} from "../../../hooks/use-auth";
 import {FaTwitch} from "react-icons/fa";
@@ -10,16 +10,17 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = () => {
-    const {isAuth, isLoaded, userInfo} = useAuth();
+    const {isAuth, isLoaded} = useAuth();
     return (
-        <header className="bg-stone-900 height-header font-semibold flex justify-between items-center container mx-auto">
+        <header
+            className="bg-stone-900 height-header font-semibold flex justify-between items-center container mx-auto">
             <div className="text-stone-100 text-xl">
                 Streamer Insights
             </div>
             <div>
                 {isLoaded && (
                     isAuth ? (
-                        <Link to={genProfileUrl(userInfo.login)}
+                        <Link to={AppPath.PROFILE}
                               className="text-sm px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition duration-300">
                             My Profile
                         </Link>

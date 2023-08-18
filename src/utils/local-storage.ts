@@ -26,6 +26,10 @@ export function setAccessToken(value: string): void {
     localStorage.setItem('twitch-access-token', value);
 }
 
+export function clearAccessToken(): void {
+    localStorage.removeItem('twitch-access-token');
+}
+
 export function getUserInfo(): UserInfo | null {
     try {
         const str = localStorage.getItem('twitch-user-info');
@@ -41,4 +45,8 @@ export function getUserInfo(): UserInfo | null {
 
 export function setUserInfo(value: UserInfo): void {
     localStorage.setItem('twitch-user-info', JSON.stringify(value));
+}
+
+export function clearUserInfo(): void {
+    localStorage.removeItem('twitch-user-info');
 }

@@ -2,11 +2,11 @@ import * as React from "react";
 import {navigate, PageProps} from "gatsby";
 import {processAuthResult} from "../../utils/auth";
 import {AuthError} from "../../utils/auth.types";
-import {Header} from "../../components/layout/header/header";
-import {Footer} from "../../components/layout/footer/footer";
+import {Header} from "../../components/marketing/header/header";
+import {Footer} from "../../components/marketing/footer/footer";
 import {useAuth} from "../../hooks/use-auth";
 import {getUserInfo, GetUserInfoError} from "../../api/get-user-info";
-import {genProfileUrl} from "../../utils/path";
+import {AppPath} from "../../utils/path";
 
 type DataProps = {}
 
@@ -34,7 +34,7 @@ const Twitch: React.FC<PageProps<DataProps>> = () => {
                     setState(state => ({...state, userInfoErr: GetUserInfoError.UNKNOWN}));
                 } else {
                     setUserInfo(userInfo);
-                    navigate(genProfileUrl(userInfo.login));
+                    navigate(AppPath.PROFILE);
                 }
             })
         }

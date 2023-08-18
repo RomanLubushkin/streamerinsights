@@ -1,11 +1,15 @@
 import * as React from "react";
 import {UserInfo} from "../types/user-info";
 import {
+    clearAccessToken,
+    clearUserInfo,
     getAccessToken,
     getUserInfo,
     setAccessToken as storageSetAccessToken,
     setUserInfo as storageSetUserInfo
 } from "../utils/local-storage";
+import {navigate} from "gatsby";
+import {AppPath} from "../utils/path";
 
 type AuthState = {
     isLoaded: boolean;
@@ -27,6 +31,13 @@ export const useAuth = () => {
         storageSetUserInfo(value);
     }, []);
 
+    const signOut = React.useCallback(() => {
+        clearUserInfo();
+        clearAccessToken();
+        setState(state => ({...state, userInfo: undefined, accessToken: undefined}));
+        navigate(AppPath.ROOT);
+    }, []);
+
     React.useEffect(() => {
         setState(state => ({...state, isLoaded: true, userInfo: getUserInfo(), accessToken: getAccessToken()}))
     }, [])
@@ -37,6 +48,7 @@ export const useAuth = () => {
         userInfo: state.userInfo,
         setUserInfo,
         accessToken: state.accessToken,
-        setAccessToken
+        setAccessToken,
+        signOut
     };
 }

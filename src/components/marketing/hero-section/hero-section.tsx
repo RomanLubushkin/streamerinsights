@@ -1,7 +1,7 @@
 import * as React from "react"
 import {useAuth} from "../../../hooks/use-auth";
 import {Link} from "gatsby";
-import {genProfileUrl} from "../../../utils/path";
+import {AppPath} from "../../../utils/path";
 
 export const HeroSection: React.FC = () => {
     const {isAuth, isLoaded, userInfo} = useAuth();
@@ -20,12 +20,13 @@ export const HeroSection: React.FC = () => {
                         {isLoaded && (
                             <>
                                 {isAuth ? (
-                                    <Link to={genProfileUrl(userInfo.login)}
+                                    <Link to={AppPath.PROFILE}
                                           className="px-6 py-3 bg-blue-500 min-w-[10rem] text-center hover:bg-blue-600 text-white rounded-full transition duration-300">
                                         My Profile
                                     </Link>
                                 ) : (
-                                    <a href="https://forms.gle/RqFNYuNKQUK79NqH6" target="_blank" rel="noopener noreferrer"
+                                    <a href="https://forms.gle/RqFNYuNKQUK79NqH6" target="_blank"
+                                       rel="noopener noreferrer"
                                        className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition duration-300">
                                         Apply for Participation
                                     </a>
