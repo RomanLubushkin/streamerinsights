@@ -4,11 +4,17 @@ import { Link } from "gatsby"
 import { AppPath } from "../../../utils/path"
 
 export const HeroSection: React.FC = () => {
-  const { isAuth, isLoaded, userInfo } = useAuth()
+  const { isAuth, isLoaded } = useAuth()
   return (
-    <section className="text-white">
+    <section className="text-white" style={{
+      backgroundImage: "linear-gradient(to right, rgba(27, 25, 23, 1) 40%, rgba(27, 25, 23, 0.8)), url(/images/hero-bg.jpg)",
+      backgroundSize: "cover",
+      backgroundPositionY: '60%',
+      backgroundPositionX: '00%',
+      backgroundRepeat: "no-repeat"
+    }}>
       <div className="container mx-auto px-6 py-24 flex items-stretch">
-        <div className="w-1/2">
+        <div className="w-full sm:w-8/12">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Uncover the Key Ingredients to Your Success
           </h1>
@@ -38,10 +44,6 @@ export const HeroSection: React.FC = () => {
               </>
             )}
           </div>
-        </div>
-        <div
-          className="relative w-1/2 -l-20 h-full before:absolute before:w-full before:h-full before:hero-gradient">
-          <img src="/images/hero-bg.jpg" alt="streamerinsights.org" />
         </div>
       </div>
     </section>
