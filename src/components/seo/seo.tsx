@@ -8,11 +8,11 @@
 import * as React from "react"
 
 export const Seo: React.FC<{ title: string, description?: string }> = props => {
-    const {title, description} = props;
-    return (
-        <>
-            <title>{title}</title>
-            <meta name="description" content={description}/>
-        </>
-    )
+  const { title, description } = props
+  return (
+    <>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+    </>
+  )
 }

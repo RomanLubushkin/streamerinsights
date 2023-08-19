@@ -1,1 +1,1 @@
-export type SystemStatusLevel = 'success' | 'error' | 'warning';
+export type SystemStatusLevel = "success" | "error" | "warning";
