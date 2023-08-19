@@ -12,17 +12,13 @@ export const AboutUsSection: React.FC<Props> = () => {
         <div className="w-full sm:w-8/12">
           <h2 className="text-3xl font-semibold mb-4">About Us</h2>
           <p className="text-stone-700 mb-6">
-            We are a non-commercial project dedicated to exploring the correlations between In-Game data
-            and the growth of content creators' audiences. Participation is completely free, but limited,
-            as we cover all computations ourselves.
-          </p>
-          <p className="text-stone-700">
-            Join us in this exciting journey of discovery and innovation. Your insights contribute to
-            shaping the future of gaming and content creation.
+            Streamer Insights is a <strong>non-commercial project</strong> run by a small group of enthusiasts dedicated to exploring
+            the correlations between In-Game data and streamer's audience. Participation is completely <strong>free, but limited</strong>,
+            as we don't have funding and cover all computations ourselves.
           </p>
         </div>
         <div className="hidden sm:flex w-4/12 flex items-center justify-center text-stone-800">
-          <GiMicroscope className="w-48 h-48" />
+          <GiMicroscope className="w-36 h-36" />
         </div>
       </div>
     </section>

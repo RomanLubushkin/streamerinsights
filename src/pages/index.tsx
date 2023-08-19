@@ -7,6 +7,7 @@ import { AboutUsSection } from "../components/marketing/about-us-section/about-u
 import { HowItWorksSection } from "../components/marketing/how-it-works-section/how-it-works-section"
 import { Footer } from "../components/marketing/footer/footer"
 import { Header } from "../components/marketing/header/header"
+import { DisclaimerSection } from "../components/marketing/disclaimer-section/about-us-section"
 
 type DataProps = {}
 
@@ -17,6 +18,7 @@ const Index: React.FC<PageProps<DataProps>> = () => {
       <HeroSection />
       <AboutUsSection />
       <HowItWorksSection />
+      <DisclaimerSection/>
       <Footer />
     </>
   )

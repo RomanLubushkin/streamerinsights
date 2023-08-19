@@ -14,13 +14,12 @@ export const HeroSection: React.FC = () => {
       backgroundRepeat: "no-repeat"
     }}>
       <div className="container mx-auto px-6 py-24 flex items-stretch">
-        <div className="w-full sm:w-8/12">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Uncover the Key Ingredients to Your Success
+        <div className="w-full sm:w-6/12">
+          <h1 className="text-3xl md:text-4xl font-bold mb-8">
+            Learn how your In-Game Performance affects your stream
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 text-stone-300">
-            Join us in the pursuit of unraveling the secrets to success through an exploration of
-            In-Game Data and Content Creators' metrics.
+          <p className="text-lg md:text-xl mb-12 text-stone-300">
+            Participate in research focused on correlations between streamers' in-game performance and key metrics of their audience such as audience size and engagement.
           </p>
           <div className="flex space-x-4 h-14 flex items-center">
             {isLoaded && (

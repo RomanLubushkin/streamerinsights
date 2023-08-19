@@ -15,9 +15,7 @@ export const HowItWorksSection: React.FC<Props> = () => {
           How It Works
         </h2>
         <p className="text-stone-200 mb-8 max-w-5xl mx-auto text-center">
-          Apply now, and we'll swiftly collect data, granting you access. While we utilize publicly
-          available data, sharing insights remains your choice. Future enhancements include public
-          sharing, but for now, we're planning to use direct links.
+          Once you apply for participation and agree to share your data with us, we will begin gathering and analyzing your in-game performance, stream audience metrics, and more. Currently, the collected data and all findings are available only to profile owners and researchers. Even though all the data we're using for analytics is publicly available, we don't know what we'll find, so it is a good practice to let people decide whether they want to share it.
         </p>
         <div className="grid grid-cols-3 gap-2 md:gap-8 mb-6 sm:mb-14">
           <div className="bg-white p-4 rounded-lg shadow-md text-center">
