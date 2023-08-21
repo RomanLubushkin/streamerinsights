@@ -1,15 +1,20 @@
 import * as React from "react"
-import { PageProps } from "gatsby"
+import { HeadFC, PageProps } from "gatsby"
 import { useAuth } from "../hooks/use-auth"
 import { SystemStatus } from "../components/system-status/system-status"
 import { Header } from "../components/app/header/header"
+import { Seo } from "../components/seo/seo"
 
-type DataProps = {}
 
-type State = {};
 
-const Twitch: React.FC<PageProps<DataProps>> = () => {
-  const [state, setState] = React.useState<State>({})
+export const Head: HeadFC = () => (
+  <Seo
+    title="Profile - streamerinsights.org"
+    description="Personal insights"
+  />
+)
+
+const Page: React.FC<PageProps> = () => {
   const { isAuth, isLoaded, signOut } = useAuth()
 
   return (
@@ -29,4 +34,4 @@ const Twitch: React.FC<PageProps<DataProps>> = () => {
   )
 }
 
-export default Twitch
+export default Page

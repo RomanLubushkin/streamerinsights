@@ -1,5 +1,5 @@
 import * as React from "react"
-import { navigate, PageProps } from "gatsby"
+import { HeadFC, navigate, PageProps } from "gatsby"
 import { processAuthResult } from "../../utils/auth"
 import { AuthError } from "../../utils/auth.types"
 import { Header } from "../../components/marketing/header/header"
@@ -7,16 +7,22 @@ import { Footer } from "../../components/marketing/footer/footer"
 import { useAuth } from "../../hooks/use-auth"
 import { getUserInfo, GetUserInfoError } from "../../api/get-user-info"
 import { AppPath } from "../../utils/path"
+import { Seo } from "../../components/seo/seo"
 
-type DataProps = {}
+export const Head: HeadFC = () => (
+  <Seo
+    title="Twitch Authentication - streamerinsights.org"
+    description="Twitch Authentication - streamerinsights.org"
+  />
+)
 
-type State = {
+type PageState = {
   authErr?: AuthError;
   userInfoErr?: GetUserInfoError;
 };
 
-const Twitch: React.FC<PageProps<DataProps>> = () => {
-  const [state, setState] = React.useState<State>({})
+const Page: React.FC<PageProps> = () => {
+  const [state, setState] = React.useState<PageState>({})
   const { setAccessToken, setUserInfo } = useAuth()
 
   React.useEffect(() => {
@@ -73,4 +79,4 @@ const Twitch: React.FC<PageProps<DataProps>> = () => {
   )
 }
 
-export default Twitch
+export default Page

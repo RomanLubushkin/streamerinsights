@@ -9,9 +9,14 @@ import { Footer } from "../components/marketing/footer/footer"
 import { Header } from "../components/marketing/header/header"
 import { DisclaimerSection } from "../components/marketing/disclaimer-section/about-us-section"
 
-type DataProps = {}
+export const Head: HeadFC = () => (
+  <Seo
+    title="Learn how your In-Game Performance affects your stream - streamerinsights.org"
+    description="Participate in research focused on correlations between streamers' in-game performance and key metrics of their audience such as audience size and engagement"
+  />
+)
 
-const Index: React.FC<PageProps<DataProps>> = () => {
+const Page: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
@@ -24,11 +29,4 @@ const Index: React.FC<PageProps<DataProps>> = () => {
   )
 }
 
-export const Head: HeadFC<DataProps> = () => (
-  <Seo
-    title="Uncover the Key Ingredients to Your Success - streamerinsights.org"
-    description="Join us in the pursuit of unraveling the secrets to success through an exploration of In-Game Data and Content Creators' metrics."
-  />
-)
-
-export default Index
+export default Page
